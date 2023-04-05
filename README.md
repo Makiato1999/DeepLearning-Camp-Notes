@@ -1,7 +1,6 @@
 # DeepLearning-Camp-Notes
-Notes about courses Dive into Deep Learning by Mu Li
-
-[Mu Li notes](https://github.com/MLNLP-World/DeepLearning-MuLi-Notes)
+Notes about course Dive into Deep Learning by Xiaoran Xie
+Complete course notes and code can access from [Mu Li notes](https://github.com/MLNLP-World/DeepLearning-MuLi-Notes)
 #### Table of Contents
 1. [Installation Machine Image](#anchor_1)<br/>
 2. [sss](#anchor_14)<br/>
