@@ -21,7 +21,7 @@ Notes about course Dive into Deep Learning by Xiaoran Xie
         - ```Public IPv4 address``` is the IP address which we need when we use ssh
     - go to the local terminal, and go to home directory, connect to server
         ```
-        ssh ubuntu@your IP address
+        ssh ubuntu@your_server_IP_address
         ```
     - if the request is denied
         ```
@@ -50,6 +50,6 @@ Notes about course Dive into Deep Learning by Xiaoran Xie
       ```
 3. connect to virtual machine by ssh
     ```
-    ssh ubuntu@54.165.148.87
+    ssh ubuntu@your_server_IP_address
     ```
     - [查找私有密钥并设置权限](https://docs.aws.amazon.com/zh_cn/AWSEC2/latest/UserGuide/connection-prereqs.html#connection-prereqs-private-key)
