@@ -2,10 +2,36 @@
 Notes about courses Dive into Deep Learning by Mu Li
 
 [Mu Li notes](https://github.com/MLNLP-World/DeepLearning-MuLi-Notes)
+#### Table of Contents
+1. [Installation Machine Image](#anchor_1)<br/>
+2. [sss](#anchor_14)<br/>
 
-1. installation
-2. keypair 
-    - first go back to home directory by ```cd ~```
+## Installation Machine Image<a name="anchor_1"></a>
+1. install AWS machine image
+    - login and search ```Amazon Machine Images (AMIs)```, then you can see the AMI catalog, since i follow Dr.Li's video, i choose the ubuntu 20.04
+    - select and click the ```Launch Instance with AMI``` on the up-right side
+    - tips
+        - instance type
+        - key pair
+        - configure storage(volume storage)
+            - it shows there is '0 x file system', i don't know if it will initialize a default file system for me
+2. connect to server by ssh
+    - when everything is done, go back to search page and check if we have the instance
+    - if instance state is pending, just wait a second
+    - if instance state is running, then we can check the details
+        - ```Public IPv4 address``` is the IP address which we need when we use ssh
+    - go to the local terminal, and go to home directory, connect to server
+        ```
+        ssh ubuntu@your IP address
+        ```
+    - if the request is denied
+        ```
+        xiexiaoran@MacBook-Pro ~ % ssh ubuntu@54.165.148.87
+        ubuntu@54.165.148.87: Permission denied (publickey).
+        ```
+        keep watching... 
+3. key pair 
+    - first go to home directory by ```cd ~```
     - when you create the keypair, it will be downloaded on your local machine, for me, it is in ```~/Downloads```
     - move the keypair to the local ssh file location, for me, it is ```~/.ssh/```
       ```
@@ -27,16 +53,4 @@ Notes about courses Dive into Deep Learning by Mu Li
     ```
     ssh ubuntu@54.165.148.87
     ```
-```
-xiexiaoran@MacBook-Pro ~ % ssh -i Desktop/xxr990610.pem ubuntu@54.165.148.87 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-Permissions 0644 for 'Desktop/xxr990610.pem' are too open.
-It is required that your private key files are NOT accessible by others.
-This private key will be ignored.
-Load key "Desktop/xxr990610.pem": bad permissions
-ubuntu@54.165.148.87: Permission denied (publickey).
-xiexiaoran@MacBook-Pro ~ % 
-```
-  - [查找私有密钥并设置权限](https://docs.aws.amazon.com/zh_cn/AWSEC2/latest/UserGuide/connection-prereqs.html#connection-prereqs-private-key)
+    - [查找私有密钥并设置权限](https://docs.aws.amazon.com/zh_cn/AWSEC2/latest/UserGuide/connection-prereqs.html#connection-prereqs-private-key)
